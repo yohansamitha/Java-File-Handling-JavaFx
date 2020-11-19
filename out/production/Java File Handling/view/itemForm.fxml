@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="557.0" prefWidth="377.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.71" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="246.0" text="Item Manager">
+            <font>
+                <Font name="Arial Bold" size="18.0" />
+            </font>
+        </Label>
+        <JFXTextField fx:id="txtItemID" labelFloat="true" layoutX="14.0" layoutY="115.0" prefHeight="25.0" prefWidth="205.0" promptText="Item ID" />
+        <JFXTextField fx:id="txtDescription" labelFloat="true" layoutX="14.0" layoutY="177.0" prefHeight="25.0" prefWidth="205.0" promptText="description" />
+        <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="14.0" layoutY="237.0" prefHeight="25.0" prefWidth="205.0" promptText="Unit Price" />
+        <JFXTextField fx:id="txtQtyOnHand" labelFloat="true" layoutX="14.0" layoutY="299.0" prefHeight="25.0" prefWidth="205.0" promptText="qtyOnHand" />
+        <TableView fx:id="tblItemDetail" layoutX="11.0" layoutY="343.0" prefHeight="200.0" prefWidth="356.0">
+            <columns>
+                <TableColumn fx:id="colItemID" prefWidth="75.0" text="Item ID" />
+                <TableColumn fx:id="colDescription" prefWidth="122.0" text="description" />
+                <TableColumn fx:id="colUnitPrice" text="Unit Price" />
+                <TableColumn fx:id="colQtyOnHand" prefWidth="78.0" text="qtyOnHand" />
+            </columns>
+        </TableView>
+        <JFXButton layoutX="260.0" layoutY="103.0" onAction="#btnAdd" prefHeight="25.0" prefWidth="58.0" text="Add" />
+        <JFXButton layoutX="260.0" layoutY="149.0" onAction="#btnDelete" prefHeight="25.0" prefWidth="58.0" style="-fx-border-radius: 30;" text="Delete" />
+        <JFXButton layoutX="260.0" layoutY="196.0" onAction="#btnUpdate" prefHeight="25.0" prefWidth="58.0" style="-fx-border-radius: 30;" text="Update" />
+        <JFXButton layoutX="260.0" layoutY="242.0" onAction="#btnSearch" prefHeight="25.0" prefWidth="58.0" style="-fx-border-radius: 30;" text="Search" />
+        <JFXButton layoutX="260.0" layoutY="283.0" onAction="#btnClear" prefHeight="25.0" prefWidth="58.0" style="-fx-border-radius: 30;" text="Clear" />
+      <JFXButton layoutX="14.0" layoutY="59.0" onAction="#btnBackOnAction" prefHeight="25.0" prefWidth="58.0" text="Back" />
+    </children>
+</AnchorPane>
